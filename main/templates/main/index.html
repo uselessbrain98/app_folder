@@ -1,11 +1,51 @@
+{% load static %}
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'vendor/css/style.css'%}">
+    <title> S7E Sneaker Store</title>
 </head>
+
 <body>
-    <h1>Главная страница</h1>
+    <header>
+        <div class=brand>
+            <img class="logo" width="70" height="70" src="{% static 'vendor/images/logo.png'%}"></img>
+            <span id="brand_name">S7E <br>Branded Sneaker store</br></span>
+        </div>
+        <nav>
+            <ul class="nav_list">
+                <li><a href="#catalog">Корзина</a></li>
+                <li><a href="#profile">Закладки</a></li>
+                <li><a href="#cart">Профиль</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <hr id="line"/>
+    
+    <main>
+        <section id="search">
+            <span id="catalog">Каталог</span>
+            <form action="" method="get">
+                <input class ="input_search" type="text" placeholder="Поиск">
+            </form>
+        </section>
+        
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <!-- Add your JavaScript scripts here -->
 </body>
+
 </html>
