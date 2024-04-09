@@ -1,51 +1,82 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" xmlns:C="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="{% static 'semantic/dist/semantic.min.css'%}">
+    <script src="{% static '/semantic/dist/semantic.min.js'%}"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'vendor/css/style.css'%}">
     <title> S7E Sneaker Store</title>
 </head>
 
 <body>
-    <header>
-        <div class=brand>
-            <img class="logo" width="70" height="70" src="{% static 'vendor/images/logo.png'%}"></img>
-            <span id="brand_name">S7E <br>Branded Sneaker store</br></span>
+<header>
+    <div class="ui inverted segment">
+        <div class="ui inverted secondary massive menu">
+            <a class="active item">
+                Каталог
+            </a>
+            <a class="item">
+                Корзина
+            </a>
+            <a class="item">
+                Избранное
+            </a>
+            <div class="right menu">
+                <a class="ui item">
+                    Профиль
+                </a>
+            </div>
+            <i class="plug link icon"></i>
+            </div>
+    </div>
+</header>
+
+<hr id="line"/>
+
+<main>
+    <section id="search">
+        <span id="catalog">Каталог</span>
+        <form action="#" method="GET">
+            <input type="text" name="search" placeholder="Введите название товара">
+            <button type="submit">Найти</button>
+        </form>
+    </section>
+    <section id="shoes">
+        <div class="shoe">
+            <h3 class="ui disabled header">Shoe Name</h3>
+            <p>Description of the shoe.</p>
+            <p>Price: $XX.XX</p>
         </div>
-        <nav>
-            <ul class="nav_list">
-                <li><a href="#catalog">Корзина</a></li>
-                <li><a href="#profile">Закладки</a></li>
-                <li><a href="#cart">Профиль</a></li>
-            </ul>
-        </nav>
-        
-    </header>
+        <div class="shoe">
+            <h3>Shoe Name</h3>
+            <p>Description of the shoe.</p>
+            <p>Price: $XX.XX</p>
+        </div>
+        <div class="shoe">
+            <h3>Shoe Name</h3>
+            <p>Description of the shoe.</p>
+            <p>Price: $XX.XX</p>
+        </div>
+        <div class="shoe">
+            <h3>Shoe Name</h3>
+            <p>Description of the shoe.</p>
+            <p>Price: $XX.XX</p>
+        </div>
+        <!-- Repeat shoe listing as needed -->
+    </section>
+</main>
 
-    <hr id="line"/>
-    
-    <main>
-        <section id="search">
-            <span id="catalog">Каталог</span>
-            <form action="" method="get">
-                <input class ="input_search" type="text" placeholder="Поиск">
-            </form>
-        </section>
-        
-    </main>
+<footer>
 
-    <footer>
+</footer>
 
-    </footer>
-
-    <!-- Add your JavaScript scripts here -->
 </body>
 
 </html>
